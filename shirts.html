@@ -53,33 +53,6 @@
             margin-right: 4px;
         }
         
-        .cover {
-            height: 100%;
-            width: 100%;
-            background: white;
-            position: fixed;
-            top: 0;
-            z-index: 2;
-        }
-        
-        .logo-container {
-            height: 500px;
-            background: url('images/red_rock_hand_resize.png');
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .content {
-            padding-top: 20px;
-            background: url('images/ROCKSTAR_Logo.png');
-            position: relative;
-            z-index: 1;
-        }
-        
-        .thumbnail {
-            border: 3px solid black;
-        }
-        
           footer {
             background-color: #d81d1f;
             position: relative;
@@ -110,15 +83,6 @@
 
         <![endif]-->
         
-        <section class="cover">
-            <div style="padding-top:30px; text-align:center;">
-                <button class="btn btn-lg btn-danger">Enter</button>
-            </div>
-            <div class="logo-container"></div>
-            <div>
-                <img style="display:block; margin:0 auto;" class="img-responsive" src="images/ROCKSTAR_Logo_resize.png" alt=""/>
-            </div>
-        </section>
         
         <section class="content">
             
@@ -267,34 +231,11 @@
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
         
         -->
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript">
-            $(document).ready(docReady);
             
-            $(window).resize(docReady);
-            
-            function docReady() {
-                var cover = true;
-                checkCover(cover);
-                
-                $(".btn-danger").click(() => {
-                    cover = false;
-                    checkCover(cover);
-                    $(".cover").fadeOut(500);
-                });
-                
-            }
-            
-            function checkCover(cover) {
-                if(cover) {
-                    $("body").css("overflow", "hidden");
-                } else {
-                    $("body").css("overflow", "auto");
-                }
-            }
-            
-            //Fade header on scroll
             $(window).scroll(function(){
                 
                 // Show nav on scroll
@@ -306,5 +247,6 @@
                 
             });
         </script>
+        
     </body>
 </html>
